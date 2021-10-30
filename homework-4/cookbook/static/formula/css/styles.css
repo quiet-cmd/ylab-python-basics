@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap');
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a {
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    color: black;
+}
+h2 {
+    margin: 0 0 0;
+    padding-top: 10px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+._container {
+    max-width: 1046px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+/*---index----------------------------------------------------------------------------*/
+.container-cover {
+    position: relative;
+    padding: 50px 0px 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cover {
+    flex-direction: row;
+    justify-content:space-between;
+    flex-basis: 50%;
+    flex-shrink: 0;
+}
+.dish-photo {
+    width: 400px;
+    height: 400px;
+    border-radius: 15%;
+}
+/*---formula----------------------------------------------------------------------------*/
+.container_info {
+    position: relative;
+    padding: 70px 0px 20px 0px;
+
+}
+.info_dish-img {
+    width: 700px;
+    height: 700px;
+    border-radius: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info_nutritional-value {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container_ingredients {
+    position: relative;
+    padding: 7px 0px 100px 0px;
+}
+.ingredients_item {
+    display: flex;
+    justify-content: space-between;
+}

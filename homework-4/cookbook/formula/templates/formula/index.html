@@ -1,0 +1,36 @@
+{% extends 'formula/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <form action="{% url 'search_results' %}" method="get">
+        <p><input type="search" name="search" placeholder="Поиск по сайту">
+        <input type="submit" value="Найти"></p>
+    </form>
+
+<div class="container-cover">
+
+    {% for c in covers %}
+
+        <div class="cover">
+            <div class="cover-title" >
+                <a class="dish-page" href="{% url 'formula' c.id %}" target="_blank">
+                    <h1> {{ c.title }}</h1>
+                </a>
+            </div>
+            <div class="cover-author">
+                <p>Автор: {{ c.author }}</p>
+            </div>
+            <div  class="cover-cooking_time">
+                <p>Время готовки: {{ c.cooking_time }}</p>
+            </div>
+            <a class="dish-page" href="{{ c.id }}" target="_blank">
+                <img src="{{ c.photo.url }}" alt="dish" class="dish-photo">
+            </a>
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock content %}
