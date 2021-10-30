@@ -1,0 +1,35 @@
+{% extends 'formula/base.html' %}
+
+{% block content %}
+
+    <div class="container_info _container">
+        <img class="info_dish-img" src="{{ covers.photo.url }}">
+        <h1 class="info_title">{{ covers.title }}</h1>
+        <div class="info_text">
+            <p>Время готовки: {{ covers.cooking_time }}</p>
+        </div>
+        <div class="info_nutritional-value">
+            <p>Белки: {{ recipe.proteins }}</p>
+            <p>Жиры: {{ recipe.fats }}</p>
+            <p>Углеводы: {{ recipe.carbohydrates }}</p>
+            <p>Калории: {{ recipe.calories }}</p>
+        </div>
+
+        <div class="info_ingredients ">
+            <h1 class="ingredients_title">Ингредиенты</h1>
+            {% for i in ingredients %}
+            <div class="ingredients_item">
+                <p class="item_name">{{ i.ingredients_name }}</p>
+                <p class="item_amount">{{ i.amount }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="info_recipe ">
+            <h1 class="recipe_title">Рецепт</h1>
+            <p class="item_amount">{{ recipe.instruction|linebreaks }}</p>
+        </div>
+
+    </div>
+
+{% endblock content %}
